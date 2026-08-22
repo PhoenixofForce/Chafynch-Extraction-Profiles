@@ -1,0 +1,47 @@
+{
+    "name": "thetea.pl",
+    "validUrls": [
+        "https://thetea.pl/en/"
+    ],
+    "settings": [
+        {
+            "field": "title",
+            "selector": ".h3-size.entry-title",
+            "regex": null,
+            "operations": [],
+            "grabAll": false
+        },
+        {
+            "field": "description",
+            "selector": ".woocommerce-product-details__short-description p:not(:has(b)):not(:has(strong))",
+            "regex": null,
+            "operations": [],
+            "grabAll": true
+        },
+        {
+            "field": "origin",
+            "selector": "b:contains(Origin),strong:contains(Origin)",
+            "regex": "(?::\\s*)?(.*)",
+            "operations": [
+                "nextSibling"
+            ],
+            "grabAll": false
+        },
+        {
+            "field": "harvest",
+            "selector": "b:contains(Harvest),strong:contains(Harvest),b:contains(Vintage),strong:contains(Vintage)",
+            "regex": "(?::\\s*)?(.*)",
+            "operations": [
+                "nextSibling"
+            ],
+            "grabAll": false
+        },
+        {
+            "field": "cultivar",
+            "selector": "strong:contains(Cultivar)",
+            "regex": "(?i)(?<=Tea Cultivar:\\s)(.*)",
+            "operations": [],
+            "grabAll": false
+        }
+    ]
+}
