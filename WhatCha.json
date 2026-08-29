@@ -1,0 +1,49 @@
+{
+	"name": "What-Cha",
+	"validUrls": [
+		"https://what-cha.com"
+	],
+	"settings": [
+		{
+			"field": "title",
+			"selector": ".product_name",
+			"regex": null,
+			"operations": [],
+			"grabAll": false
+		},
+		{
+			"field": "description",
+			"selector": ".description p:not(:has(span))",
+			"regex": null,
+			"operations": [],
+			"grabAll": true
+		},
+		{
+			"field": "origin",
+			"selector": "span:contains(Origin)",
+			"regex": null,
+			"operations": [
+				"nextSibling"
+			],
+			"grabAll": false
+		},
+		{
+			"field": "harvest",
+			"selector": "span:contains(Harvest)",
+			"regex": null,
+			"operations": [
+				"nextSibling"
+			],
+			"grabAll": false
+		},
+		{
+			"field": "cultivar",
+			"selector": "span:contains(Cultivar)",
+			"regex": null,
+			"operations": [
+				"nextSibling"
+			],
+			"grabAll": false
+		}
+	]
+}
