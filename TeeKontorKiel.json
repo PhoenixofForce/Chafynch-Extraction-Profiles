@@ -1,0 +1,41 @@
+{
+	"name": "TeeKontorKiel",
+	"settings": [
+		{
+			"field": "title",
+			"selector": ".product-detail-name",
+			"grabAll": false
+		},
+		{
+			"field": "description",
+			"selector": ".product-detail-description",
+			"grabAll": false,
+			"operations": []
+		},
+		{
+			"field": "origin",
+			"selector": ".st-property-label:contains(Anbaugebiete)",
+			"grabAll": false,
+			"operations": [
+				"nextElementSibling"
+			]
+		},
+		{
+			"field": "cultivar",
+			"selector": ".st-property-label:contains(Kultivar)",
+			"grabAll": false,
+			"operations": [
+				"nextElementSibling"
+			]
+		},
+		{
+			"field": "harvest",
+			"selector": ".product-detail-name",
+			"regex": "(\\d{4})",
+			"grabAll": false
+		}
+	],
+	"validUrls": [
+		"https://www.tee-kontor-kiel.de"
+	]
+}
