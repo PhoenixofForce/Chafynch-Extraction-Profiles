@@ -1,0 +1,29 @@
+{
+	"name": "white2tea",
+	"validUrls": [
+		"https://white2tea.com"
+	],
+	"settings": [
+		{
+			"field": "title",
+			"selector": ".product-title",
+			"regex": "",
+			"operations": [],
+			"grabAll": false
+		},
+		{
+			"field": "description",
+			"selector": ".product-description p",
+			"regex": null,
+			"operations": [],
+			"grabAll": true
+		},
+		{
+			"field": "harvest",
+			"selector": ".product-title",
+			"regex": "(\\d{4})",
+			"operations": [],
+			"grabAll": false
+		}
+	]
+}
