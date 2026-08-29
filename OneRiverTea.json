@@ -1,0 +1,49 @@
+{
+	"name": "OneRiverTea",
+	"validUrls": [
+		"https://onerivertea.com"
+	],
+	"settings": [
+		{
+			"field": "title",
+			"selector": ".product-single__title",
+			"regex": null,
+			"operations": [],
+			"grabAll": false
+		},
+		{
+			"field": "description",
+			"selector": ".product-single__description p",
+			"regex": null,
+			"operations": [],
+			"grabAll": true
+		},
+		{
+			"field": "origin",
+			"selector": "strong:contains(Region)",
+			"regex": null,
+			"operations": [
+				"nextSibling"
+			],
+			"grabAll": false
+		},
+		{
+			"field": "harvest",
+			"selector": "strong:contains(Harvest)",
+			"regex": null,
+			"operations": [
+				"nextSibling"
+			],
+			"grabAll": false
+		},
+		{
+			"field": "cultivar",
+			"selector": "strong:contains(Tea)",
+			"regex": null,
+			"operations": [
+				"nextSibling"
+			],
+			"grabAll": false
+		}
+	]
+}
