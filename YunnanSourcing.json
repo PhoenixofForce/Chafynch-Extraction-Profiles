@@ -1,0 +1,22 @@
+{
+	"name": "Yunnan Sourcing",
+	"validUrls": [
+		"https://yunnansourcing.com"
+	],
+	"settings": [
+		{
+			"field": "title",
+			"selector": ".product-title",
+			"regex": null,
+			"operations": [],
+			"grabAll": false
+		},
+		{
+			"field": "description",
+			"selector": ".product-description p",
+			"regex": null,
+			"operations": [],
+			"grabAll": true
+		}
+	]
+}
